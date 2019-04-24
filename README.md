@@ -10,5 +10,5 @@ If you are building your project with this effect, be sure to add the "Flare" sh
 
 ## Caveats
 1. This effect is not physically based, so just because you have a physically based project setup doesn't mean this effect will look right in your project. Tweaks are expect to be done on a per project (if not a per scene) basis. Depending on the scope of your project supporting this effects can spell tech debt.
-2. Tweaking this effect can not be done in runtime, edits and only be made in shader. This is mostly because these settings (e.g. intensity, amount of chromatic aberration) don't make sense to be blended, which the Post Processing framework does.
-3. I have not benchmarked this since porting it over from previous Unity post processing frameworks.
+2. Tweaking this effect can not be done in runtime and can only be made in shader. This is mostly because these settings (e.g. intensity, amount of chromatic aberration) don't make sense to be blended, which the Post Processing framework does. Nevertheless feel free to port it out to be runtime tweakable...
+3. I have not benchmarked this since porting it over from previous Unity post processing frameworks. I estimate it's about as expensive as something like depth of field.
