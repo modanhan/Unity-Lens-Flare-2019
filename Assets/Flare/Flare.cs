@@ -66,10 +66,10 @@ namespace Aerobox.Rendering.PostProcessing
                     if (renderTextures1[i])
                         renderTextures1[i].Release();
                 }
-            downsampled.Release();
-            radialWarped.Release();
-            ghosts.Release();
-            aberration.Release();
+            if (downsampled != null) downsampled.Release();
+            if (radialWarped != null) radialWarped.Release();
+            if (ghosts != null) ghosts.Release();
+            if (aberration != null) aberration.Release();
         }
 
         private const int BOX_UP_PASS = 0;
